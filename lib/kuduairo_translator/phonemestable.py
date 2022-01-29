@@ -22,5 +22,6 @@ phonemes_dict = OrderedDict(
         ("ão", "eum"),
         ("lar", "laire"),
         ("dia", "doaia")
+        ("vida", "voaida")
     ]
 )
