@@ -1,24 +1,10 @@
-from lib.kuduairo_translator.phonemestable import PhonemesTable
+from lib.kuduairo_translator.phonemestable import phonemes_dict
 
 class Entrypoint:
-    def __init__(self, sentence, current_language, target_language):
-        self.sentence = sentence
-        self.current_language = current_language
-        self.target_language = target_language
-        self.phonemes = PhonemesTable()
-
-    def set_sentence(self, sentence):
-        self.sentence = sentence
+    @staticmethod
+    def pt_to_kd(text):
+        for i, j in phonemes_dict.items():
+            text = text.replace(i, j)
+        return text
     
-    def get_sentence(self):
-        return self.sentence
-
-    def translate(self):
-        pt_KD = self.phonemes.get_kuduairo_phonemes
-        pt_BR = self.phonemes.get_brazilian_portuguese_phonemes
-
-        for index in range(pt_BR.len()):
-            self.set_sentence = self.sentence.replace(pt_BR[index], pt_KD[index])
-
-        return self.sentence
 

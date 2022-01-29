@@ -1,15 +1,26 @@
-class PhonemesTable:
-    def __init__(self):
-        self.kuduairo_phonemes = [
-            "uro"
-        ]
-        
-        self.brazilian_portuguese_phonemes = [
-            "uairo"
-        ]
-    
-    def get_kuduairo_phonemes(self):
-        return self.kuduairo_phonemes
+from collections import OrderedDict
 
-    def get_brazilian_portuguese_phonemes(self):
-        return self.brazilian_portuguese_phonemes
+phonemes_dict = OrderedDict(
+    [
+        ("uro", "uairo"),
+        ("ome", "osme"),
+        ("amina", "asmina"),
+        ("bem", "boain"),
+        ("undo", "uaindo"),
+        ("ouco", "osco"),
+        ("ouquinho", "osquanho"),
+        ("ntira", "ntoaira"),
+        ("ista", "oaista"),
+        ("oiro", "oairo"),
+        ("nta", "inta"),
+        ("ail", "oail"),
+        ("uem", "ueim"),
+        ("oria", "oairia"),
+        ("ras", "reis"),
+        ("usa", "uisa"),
+        ("ç", "s"),
+        ("ão", "eum"),
+        ("lar", "laire"),
+        ("dia", "doaia")
+    ]
+)
