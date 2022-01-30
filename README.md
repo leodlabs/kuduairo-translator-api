@@ -11,4 +11,4 @@ To-Do:
  - Open a Pull Request describing your implementation
  - Wait for a review (I'll review ASAP)
 
-If you wants to become a organization member, just dm me on Twitter
+If you want to become a organization member, just dm me on Twitter
