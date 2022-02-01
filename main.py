@@ -1,10 +1,9 @@
 from fastapi import FastAPI
 from models.Translation import Translation
-from lib.kuduairo_translator.entrypoint import Entrypoint as Translator
+from lib.kuduairo_translator.entrypoint import translate
 import uvicorn
 
 app = FastAPI()
-translator = Translator()
 
 @app.get("/")
 def index():
@@ -16,7 +15,7 @@ def brazilian_portuguese_to_kuduairo(translation: Translation):
         'status': 'success',
         'current_language': translation.target_language,
         'original_language': translation.current_language,
-        'translation': translator.pt_to_kd(translation.sentence)
+        'translation': translate(translation.sentence)
     }
 
 @app.post("/kd-to-pt/")                             
