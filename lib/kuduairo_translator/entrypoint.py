@@ -1,8 +1,8 @@
-import pandas as pd
+import dask.dataframe as dd
 import unicodedata
 import re
 
-df = pd.read_csv("lib/kuduairo_translator/datasets/dataset.csv", nrows=261798)
+df = dd.read_csv("lib/kuduairo_translator/datasets/dataset.csv")
 dataset = dict(zip(df.portuguese, df.kuduairese))
 
 def translate(sentence):
